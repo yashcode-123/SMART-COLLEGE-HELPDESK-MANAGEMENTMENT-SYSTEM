@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Signup | Smart Helpdesk</title>
+
+  
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* FULL PAGE CENTER */
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+      radial-gradient(circle at top left,
+      rgba(139,92,246,0.25),
+      transparent 30%),
+
+      radial-gradient(circle at bottom right,
+      rgba(99,102,241,0.2),
+      transparent 30%),
+
+      #09090b;
+
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    /* BACKGROUND GLOW */
+    .bg-glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: #8b5cf6;
+      filter: blur(120px);
+      opacity: 0.25;
+      z-index: 0;
+    }
+
+    .glow1 {
+      top: -100px;
+      left: -100px;
+    }
+
+    .glow2 {
+      bottom: -100px;
+      right: -100px;
+      background: #6366f1;
+    }
+
+    /* SIGNUP CARD */
+    .signup-container {
+      width: 100%;
+      max-width: 430px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .signup-card {
+      background: rgba(23, 23, 23, 0.7);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+
+      border: 1px solid rgba(255,255,255,0.1);
+
+      border-radius: 22px;
+
+      padding: 40px;
+
+      box-shadow:
+      0 0 30px rgba(139,92,246,0.15);
+
+      transition: 0.4s ease;
+    }
+
+    .signup-card:hover {
+      transform: translateY(-5px);
+      border-color: #8b5cf6;
+
+      box-shadow:
+      0 0 35px rgba(139,92,246,0.35);
+    }
+
+    /* TITLE */
+    .signup-title {
+      text-align: center;
+      margin-bottom: 10px;
+
+      font-size: 2rem;
+      font-weight: 700;
+
+      color: #f4f4f5;
+    }
+
+    .signup-title span {
+      color: #8b5cf6;
+    }
+
+    .signup-subtitle {
+      text-align: center;
+      color: #a1a1aa;
+      margin-bottom: 35px;
+      font-size: 0.95rem;
+    }
+
+    /* INPUT GROUP */
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #d4d4d8;
+      font-size: 0.9rem;
+    }
+
+    .input-group input,
+    .input-group select {
+
+      width: 100%;
+
+      padding: 14px;
+
+      border-radius: 12px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(255,255,255,0.04);
+
+      color: #f4f4f5;
+
+      outline: none;
+
+      transition: 0.3s;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus {
+
+      border-color: #8b5cf6;
+
+      box-shadow:
+      0 0 15px rgba(139,92,246,0.35);
+    }
+
+    /* SELECT OPTIONS */
+    select option {
+      background: #18181b;
+      color: white;
+    }
+
+    /* BUTTON */
+    .signup-btn {
+
+      width: 100%;
+
+      padding: 14px;
+
+      border: none;
+
+      border-radius: 12px;
+
+      background: linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6366f1
+      );
+
+      color: white;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
+
+      box-shadow:
+      0 0 20px rgba(139,92,246,0.35);
+    }
+
+    .signup-btn:hover {
+
+      transform: translateY(-2px);
+
+      box-shadow:
+      0 0 30px rgba(139,92,246,0.6);
+    }
+
+    /* LOGIN LINK */
+    .bottom-text {
+
+      text-align: center;
+
+      margin-top: 20px;
+
+      color: #a1a1aa;
+
+      font-size: 0.9rem;
+    }
+
+    .bottom-text a {
+
+      color: #8b5cf6;
+
+      text-decoration: none;
+
+      font-weight: 600;
+    }
+
+    .bottom-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 500px) {
+
+      .signup-card {
+        padding: 28px;
+      }
+
+      .signup-title {
+        font-size: 1.7rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Background Glow -->
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
+  <!-- Signup Container -->
+  <div class="signup-container">
+
+    <div class="signup-card">
+
+      <h1 class="signup-title">
+        Smart<span>Helpdesk</span>
+      </h1>
+
+      <p class="signup-subtitle">
+        Create your account to continue
+      </p>
+
+      <!-- FORM -->
+      <form id="signupForm">
+
+        <!-- NAME -->
+        <div class="input-group">
+
+          <label>Full Name</label>
+
+          <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required>
+
+        </div>
+
+        <!-- EMAIL -->
+        <div class="input-group">
+
+          <label>College Email</label>
+
+          <input
+          type="email"
+          id="email"
+          placeholder="abc@college.edu"
+          required>
+
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group">
+
+          <label>Password</label>
+
+          <input
+          type="password"
+          id="password"
+          placeholder="Create password"
+          required>
+
+        </div>
+
+        <!-- ROLE -->
+        <div class="input-group">
+
+          <label>Select Role</label>
+
+          <select id="role">
+
+            <option value="student">
+              Student
+            </option>
+
+            <option value="admin">
+              Admin
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button
+        type="submit"
+        class="signup-btn"
+        id="signupBtn">
+
+          Create Account
+
+        </button>
+
+      </form>
+
+      <!-- LOGIN -->
+      <div class="bottom-text">
+
+        Already have an account?
+
+        <a href="login.html">
+          Login
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script  type="module" src="firebase.js"></script>
+  <script  type="module" src="signup.js"></script>
+</body>
+</html>

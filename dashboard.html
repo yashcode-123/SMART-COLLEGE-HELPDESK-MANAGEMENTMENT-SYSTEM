@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Smart Helpdesk</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+        <div class="logo">SMART<span>HELP</span></div>
+        <div class="nav-links">
+            
+            <a href="homepage.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;" class="nav.hover">Home</a>
+            <a href="about.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">About</a>
+            <a href="services.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">services</a>
+            <a href="complaint.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">complaint</a>
+            <a href="track.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">track</a>
+            <a href="dashboard.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">dashboard</a>
+            <a href="login.html" class="btn-primary">Login</a>
+        </div>
+        </div>
+    
+</nav>
+
+<!-- HEADER -->
+<section class="dashboard-header">
+  <h1>Welcome, Yash 👋</h1>
+  <p>Here’s what’s happening with your complaints</p>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+  <div class="glass-card stat-card">
+    <h3>Total Complaints</h3>
+    <p>12</p>
+  </div>
+
+  <div class="glass-card stat-card">
+    <h3>Pending</h3>
+    <p class="pending">5</p>
+  </div>
+
+  <div class="glass-card stat-card">
+    <h3>In Progress</h3>
+    <p class="progress">4</p>
+  </div>
+
+  <div class="glass-card stat-card">
+    <h3>Resolved</h3>
+    <p class="resolved">3</p>
+  </div>
+
+</section>
+
+<!-- QUICK ACTIONS -->
+<section class="actions">
+
+  <a href="complaint.html" class="glass-card action-card">
+    <i class="fa fa-plus-circle"></i>
+    <h3>Raise Complaint</h3>
+  </a>
+
+  <a href="track.html" class="glass-card action-card">
+    <i class="fa fa-search"></i>
+    <h3>Track Complaint</h3>
+  </a>
+
+  <a href="departments.html" class="glass-card action-card">
+    <i class="fa fa-building"></i>
+    <h3>Departments</h3>
+  </a>
+
+</section>
+
+<!-- TABLE -->
+<section class="table-section">
+
+  <div class="glass-card">
+    <h2>Recent Complaints</h2>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Issue</th>
+        <th>Status</th>
+      </tr>
+
+      <tr>
+        <td>#101</td>
+        <td>WiFi not working</td>
+        <td><span class="status pending">Pending</span></td>
+      </tr>
+
+      <tr>
+        <td>#102</td>
+        <td>Hostel water issue</td>
+        <td><span class="status progress">In Progress</span></td>
+      </tr>
+
+      <tr>
+        <td>#103</td>
+        <td>Fee payment error</td>
+        <td><span class="status resolved">Resolved</span></td>
+      </tr>
+
+    </table>
+  </div>
+
+</section>
+
+</body>
+</html>

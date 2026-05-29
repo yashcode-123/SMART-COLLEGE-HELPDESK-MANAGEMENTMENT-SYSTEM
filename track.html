@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Complaint - Smart Helpdesk</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+  
+  <div class="logo">SMART<span>HELP</span></div>
+        <div class="nav-links">
+            <a href="homepage.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;">Home</a>
+            <a href="about.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;">About</a>
+            <a href="services.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;">services</a>
+            <a href="complaint.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;">complaint</a>
+            <a href="track.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;">track</a>
+            <a href="dashboard.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">dashboard</a>
+            <a href="login.html" class="btn-primary">Login</a>
+        </div>
+</nav>
+
+
+<section class="hero">
+  <h1>Track Your Complaint</h1>
+  <p>Check real-time status and progress</p>
+</section>
+
+<!-- SEARCH -->
+<section class="track-search">
+  <div class="glass-card">
+    <input type="text" placeholder="Enter Complaint ID (e.g. #101)">
+    <button class="btn-primary">Track</button>
+  </div>
+</section>
+
+<!-- TRACK CARD -->
+<section class="track-result">
+
+  <div class="glass-card">
+
+    <h2>Complaint #101</h2>
+    <p>WiFi not working in hostel</p>
+
+    <span class="status progress">In Progress</span>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+
+      <div class="step completed">
+        <i class="fa fa-check-circle"></i>
+        <div>
+          <h4>Submitted</h4>
+          <p>Complaint registered successfully</p>
+        </div>
+      </div>
+
+      <div class="step completed">
+        <i class="fa fa-check-circle"></i>
+        <div>
+          <h4>Assigned</h4>
+          <p>Assigned to IT Department</p>
+        </div>
+      </div>
+
+      <div class="step active">
+        <i class="fa fa-spinner"></i>
+        <div>
+          <h4>In Progress</h4>
+          <p>Issue is being resolved</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <i class="fa fa-circle"></i>
+        <div>
+          <h4>Resolved</h4>
+          <p>Pending completion</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

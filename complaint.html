@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raise Complaint - Smart Helpdesk</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+        <div class="logo">SMART<span>HELP</span></div>
+        <div class="nav-links">
+            
+            <a href="homepage.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;" class="nav.hover">Home</a>
+            <a href="about.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">About</a>
+            <a href="services.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">services</a>
+            <a href="complaint.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">complaint</a>
+            <a href="track.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">track</a>
+            <a href="dashboard.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">dashboard</a>
+            <a href="login.html" class="btn-primary">Login</a>
+        </div>
+        </div>
+    
+</nav>
+
+
+<section class="hero">
+  <h1>Raise a Complaint</h1>
+  <p>Submit your issue and we’ll resolve it quickly</p>
+</section>
+
+<section class="complaint-section">
+
+  <form class="glass-card complaint-form" id="complaintForm">
+
+    <!-- TITLE -->
+    <div class="input-group">
+      <label>Complaint Title</label>
+      <div class="input-box">
+        <i class="fa fa-pen"></i>
+        <input type="text" id="title" placeholder="Enter complaint title" required>
+      </div>
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="input-group">
+      <label>Category</label>
+      <select id="category">
+        <option>Hostel</option>
+        <option>IT / WiFi</option>
+        <option>Fees</option>
+        <option>Library</option>
+      </select>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="input-group">
+      <label>Description</label>
+      <textarea rows="4" id="description" placeholder="Describe your issue clearly..." required></textarea>
+    </div>
+
+    <!-- SUBMIT -->
+    <button type="submit" class="btn-primary">Submit Complaint</button>
+
+  </form>
+
+</section>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="complaint.js"></script>
+
+</body>
+</html>
