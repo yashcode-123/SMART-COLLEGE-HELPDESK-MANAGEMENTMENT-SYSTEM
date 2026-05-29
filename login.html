@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Smart Helpdesk</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<!-- NAVBAR -->
+<nav>
+        <div class="logo">SMART<span>HELP</span></div>
+        <div class="nav-links">
+            
+            <a href="homepage.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;" class="nav.hover">Home</a>
+            <a href="about.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">About</a>
+            <a href="services.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">services</a>
+            <a href="complaint.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">complaint</a>
+            <a href="track.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">track</a>
+            <a href="dashboard.html" style="color: var(--text-dim); margin-right: 20px; text-decoration: none;"class="nav.hover">dashboard</a>
+            
+            <a href="login.html" class="btn-primary">Login</a>
+        </div>
+        </div>
+    
+</nav>
+
+<body>
+
+<div class="login-wrapper">
+
+  <div class="glass-card login-card" id="loginForm">
+
+    <h2>Smart <span>Helpdesk</span></h2>
+    <p class="subtitle">Login to your account</p>
+
+    <!-- USERNAME -->
+    <div class="input-group">
+      <label>Email</label>
+      <div class="input-box">
+        <i class="fa fa-user"></i>
+        <input type="email" id="email" placeholder="Enter email" required>
+      </div>
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="input-group">
+      <label>Password</label>
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="password" placeholder="Enter password" required>
+      </div>
+    </div>
+
+    <!-- BUTTON -->
+    <button class="btn-primary" type="submit">Login</button>
+
+    <p class="forgot">Forgot password?</p>
+    <a href="signup.html"> Don't have an account? Sign up</a>
+
+  </div>
+
+</div>
+<script type="module" src="login.js"></script>
+
+
+</body>
+</html>
